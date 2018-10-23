@@ -89,7 +89,6 @@ userIdRef.on('value', function (snapshot) {
 })
 
 let kickRef = db.ref('seat/test1/kick')
-kickRef.set(0)
 
 let isReservedRef = db.ref('seat/test1/isReserved')
 isReservedRef.set(false)
@@ -119,6 +118,7 @@ export default {
         this.userId = ''
         this.kickChangeBgColor()
         this.offlineSeat()
+        alert('좌석 사용 신청이 완료되었습니다.')
       }
     },
     offlineSeat () {
